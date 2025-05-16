@@ -1,0 +1,191 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding:0;
+    background-color: #4B4B4B;
+    background-image: url(dinosaurfootprints.avif); 
+  }
+  
+
+/* header and Footer*/
+header,footer{
+    background-size: 300px;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 10px;
+    
+}
+
+h1{
+  background-color: #FFBF00;
+  text-align: center;
+  padding:10px;
+}
+
+.row{
+  font-style: oblique;
+  display : flex;
+   color: rgb(11, 11, 11);
+}
+
+.column{
+  flex: 1;
+  background-color:#FFD580;
+  margin: 5px;
+  padding: 20px;
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  font-size:large;
+  justify-content: space-between;
+}
+.column20{
+  flex: 3;
+  background-color:#FFD580;
+  margin: 5px;
+  padding: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width:50px;
+  height: auto;
+}
+.feeding{
+  display: block;
+    margin: 20px auto; /* centers it  */
+    width: 400px;       /* adjust size */
+    height: auto;
+}
+
+.narwhal{
+  height: auto;
+  width: 350px;
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+
+/*Navigation menu/*
+/* Footer  position*/
+footer{ 
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(2, 2, 2);
+    width: auto;
+    height: auto;
+}
+
+img {
+    width: 100px;   /* or any size you want */
+    height: auto;   /* maintains aspect ratio */
+  }
+
+nav :hover{
+    background-color: #f5f5f5;
+}
+
+/* buttons*/
+
+a {
+    --color: #B94D40;
+    font-family: inherit;
+    display: inline-block;
+    width: 10em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+  }
+  
+  a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  a:hover {
+    color: #fff;
+  }
+  
+  a:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  a:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  a:active:before {
+    background: #F4A300;
+    transition: background 0s;
+  }
+
+  /* Form image */ 
+.custum-file-upload {
+  height: auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #e8e8e8;
+  background-color: #212121;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px #d19494;
+  align-content: center;
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: #e8e8e8;
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: #e8e8e8;
+}
+
+.custum-file-upload input {
+  display: none;
+}
+

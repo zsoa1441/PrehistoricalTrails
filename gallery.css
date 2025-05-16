@@ -1,0 +1,169 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding:0;
+    background-color: #f5f5f5;
+    background-image: url(fossile1.jpeg)
+  }
+  
+
+/* header and Footer*/
+header,footer{
+    background-color: #D72638;
+    color: rgb(252, 249, 249);
+    text-align: center;
+    padding: 50px;
+}
+
+h1{
+  background-color: #D72638;
+  text-align: center;
+}
+
+.row{
+  font-style: oblique;
+  display : flex;
+   color: rgb(11, 11, 11);
+}
+
+
+
+/*Navigation menu/*
+/* Footer  position*/
+footer{ 
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(2, 2, 2);
+    width: auto;
+    height: auto;
+}
+a {
+    --color: #D72638;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+  }
+  
+  a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  a:hover {
+    color: #fff;
+  }
+  
+  a:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  a:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  a:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+  }
+
+  /* scroll*/
+
+.card {
+  width: 100%;
+  height: 90%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.card p {
+  font-size: 14px;
+  color: white;
+}
+
+.slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+.slider .list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  transition: filter 0.5s;
+  animation-delay: calc(
+    (10s / var(--quantity)) * (var(--position) - 1) - 10s
+  ) !important;
+}
+.slider .list .item img {
+  width: 100%;
+}
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+.slider:hover .item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+.slider .item:hover {
+  filter: grayscale(0);
+}
+.slider[reverse="true"] .item {
+  animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay {
+  from {
+    left: calc(var(--width) * -1);
+  }
+  to {
+    left: 100%;
+  }
+}
